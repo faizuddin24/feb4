@@ -1,0 +1,32 @@
+import java.util.HashSet;
+
+public class HashSetExample {
+    public static void main(String[] args) {
+        // Create a HashSet of strings
+        HashSet<String> cities = new HashSet<>();
+
+        // Add five city names to the set (with a duplicate entry)
+        cities.add("New York");
+        cities.add("Los Angeles");
+        cities.add("Chicago");
+        cities.add("Houston");
+        cities.add("New York"); // Duplicate entry
+
+        // Display the elements to show that duplicates are not allowed
+        System.out.println("Cities in the HashSet:");
+        for (String city : cities) {
+            System.out.println(city);
+        }
+
+        // Check if a particular city exists in the set
+        boolean exists = cities.contains("Chicago");
+        System.out.println("Does Chicago exist in the set? " + exists);
+
+        // Remove a city and display the updated set
+        cities.remove("Houston");
+        System.out.println("Updated cities in the HashSet:");
+        for (String city : cities) {
+            System.out.println(city);
+        }
+    }
+}
